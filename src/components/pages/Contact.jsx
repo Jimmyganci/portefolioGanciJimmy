@@ -29,7 +29,7 @@ const Contact = () => {
 
   const handleSubmitMail = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/send", {
+    axios.post("https://portefoliojimmyganci.herokuapp.com/", {
       firstname: firstName,
       lastname: lastName,
       email: email,
