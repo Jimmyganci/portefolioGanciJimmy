@@ -1,0 +1,84 @@
+.presentation {
+  text-align: center;
+  height: 100vh;
+  padding-top: 4em;
+  &__flex {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    padding: 4em 0;
+    @media screen and(max-width:900px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      height: 95vh;
+    }
+    &--right {
+      width: 50%;
+      border-left: 2px solid $redColor;
+      padding: 0 5em;
+      transition: 2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media screen and(max-width:900px) {
+        width: 90%;
+        height: 50%;
+        border: none;
+        border-top: 2px solid $redColor;
+        padding: 0;
+        overflow: scroll;
+      }
+      @media screen and(max-width:400px) {
+        padding-top: 2.5em;
+      }
+      h2 {
+        margin-bottom: 1em;
+        @media screen and(max-width:900px) {
+          margin-bottom: 0.5em;
+        }
+      }
+      p {
+        margin: 1em 0;
+        text-align: justify;
+        opacity: 0;
+        transition: 1.7s ease-in-out;
+        transform: translateY(10vh);
+        @media screen and(max-width:900px) {
+          margin: 0.5em;
+        }
+      }
+    }
+    &--left {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      @media screen and(max-width:900px) {
+        width: 50%;
+        height: 40%;
+      }
+      @media screen and(max-width:400px) {
+        width: 50%;
+        height: 30%;
+      }
+      div {
+        width: 100%;
+        background-image: url("../assets/Jimmy2.png");
+        border-radius: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 20%;
+        filter: brightness(0.5);
+        @media screen and(max-width:900px) {
+          background-position-x: 50%;
+        }
+        img {
+          width: 100%;
+          margin: 0 auto;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

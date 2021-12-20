@@ -1,0 +1,114 @@
+.portefolio {
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  &__hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 1.7s cubic-bezier(0.72, 0.16, 0.4, 0.92);
+    background: black;
+    z-index: 1;
+    position: relative;
+    &--title {
+      width: 80%;
+      border-bottom: 2px solid $redColor;
+      text-align: center;
+      width: 80%;
+      border-bottom: 2px solid $redColor;
+      text-align: center;
+      padding-bottom: 2em;
+      h1 {
+        font-family: "fontTitle";
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 2em;
+        @media screen and(max-width:450px) {
+          letter-spacing: 5px;
+        }
+        span {
+          color: $redColor;
+        }
+      }
+    }
+  }
+  &__containerProject {
+    text-align: center;
+    height: 100vh;
+    transition: 1.7s cubic-bezier(0.72, 0.16, 0.4, 0.92);
+    &__flex {
+      display: flex;
+      align-items: center;
+      height: 80%;
+      margin-top: 5em;
+      @media screen and (max-width: 850px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &--count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 9em;
+        font-family: "fontBold";
+        z-index: -1;
+        color: #302222;
+      }
+      &--left {
+        width: 50%;
+        height: 100%;
+        border-right: 2px solid $redColor;
+        position: relative;
+        @media screen and(max-width:850px) {
+          height: 50%;
+          border: none;
+          display: flex;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 2px;
+          height: 0;
+          background: $redColor;
+          transition: 0.5s ease-out;
+        }
+      }
+      &--right {
+        width: 50%;
+        height: 80%;
+        margin-top: 4em;
+        transform: translateY(-400vh);
+        position: relative;
+        @media screen and(max-width:850px) {
+          display: flex;
+          transform: translateY(0);
+        }
+        @media screen and(max-width:650px) {
+          margin: 0;
+        }
+      }
+      &--point {
+        display: flex;
+        justify-content: center;
+        margin: 0.7em auto;
+        z-index: 2;
+        position: relative;
+        span {
+          background: rgba(145, 0, 0, 0.4);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 2em;
+          transition: 0.5s ease-out;
+          cursor: pointer;
+          @media screen and(max-width:450px) {
+            margin: 0 1em;
+          }
+        }
+      }
+    }
+  }
+}

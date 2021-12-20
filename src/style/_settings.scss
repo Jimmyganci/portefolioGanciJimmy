@@ -1,0 +1,60 @@
+$fontSize-Title: 1.8em;
+$fontSize-Basic: 0.5em;
+$redColor: rgb(145, 0, 0);
+@font-face {
+  font-family: "fontBis";
+  src: url("../fonts/Kanit-Thin.ttf");
+}
+@font-face {
+  font-family: "fontTitle";
+  src: url("../fonts/Kanit-Thin.ttf");
+}
+@font-face {
+  font-family: "fontBold";
+  src: url("../fonts/Kanit-Bold.ttf");
+}
+* {
+  font-family: "fontBis";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.titleCategoryHome {
+  font-size: 2em;
+  font-family: "fontTitle";
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  span {
+    color: $redColor;
+  }
+}
+.test {
+  transition: 0.8s ease-out;
+  opacity: 0;
+}
+.hiddenRight {
+  transform: translateX(10vh);
+}
+.hiddenLeft {
+  transform: translateX(-10vh);
+}
+.show {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+.scrollDown {
+  transform: translateY(-100vh);
+}
+.scrollAgain {
+  transform: translateY(-200vh);
+}
+.noOpacity {
+  opacity: 1 !important;
+  z-index: 1 !important;
+}
+.redPoint {
+  background: $redColor !important;
+}

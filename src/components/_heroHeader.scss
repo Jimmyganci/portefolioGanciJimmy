@@ -1,0 +1,119 @@
+.heroHeader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__categoryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: 60%;
+    &__category {
+      a {
+        width: 100%;
+        height: 100%;
+        button {
+          background: none;
+          border: none;
+          font-family: "fontBold";
+          text-transform: uppercase;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          transition: 0.4s ease-out;
+          position: relative;
+          &:hover {
+            background: rgba(255, 255, 255, 0.103);
+          }
+        }
+      }
+
+      &.up {
+        grid-area: 1/1/1/3;
+        border-bottom: 2px solid $redColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		@media screen and(max-width:450px){
+			text-align:center;
+		}
+        h1 {
+          font-family: "fontTitle";
+          text-transform: uppercase;
+          letter-spacing: 10px;
+          span {
+            color: $redColor;
+          }
+        }
+        h2 {
+          font-size: 1em;
+          opacity: 0.6;
+          letter-spacing: 5px;
+        }
+      }
+      &.leftDown {
+        grid-area: 2/1;
+        border-right: 2px solid $redColor;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 3em;
+        button {
+          overflow: hidden;
+          border-radius: 0 0 0 10px;
+          &:before {
+            content: "Portefolio";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: rgb(30, 30, 30);
+            transition: 0.7s ease-out;
+          }
+          &:hover:before {
+            font-size: 16em;
+            color: rgb(145, 0, 0);
+          }
+        }
+      }
+      &.rightDown {
+        grid-area: 2/2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 3em;
+        button {
+          overflow: hidden;
+          border-radius: 0 0 10px 0;
+          &:before {
+            content: "Contact";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: rgb(30, 30, 30);
+            transition: 0.7s ease-out;
+          }
+          &:hover:before {
+            font-size: 16em;
+            color: rgb(145, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
